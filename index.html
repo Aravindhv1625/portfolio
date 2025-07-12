@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="flash-effect"></div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo"><i class="fas fa-camera-retro"></i></div>
+  <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#portfolio">Pics</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Particles Background -->
+<div id="particles-js"></div>
+
+<!-- Hero Section -->
+<div class="hero two-column popup-animate" id="home">
+  <div class="hero-left">
+    <h1>Hi, I'm <span class="highlight">Aravindh V</span></h1>
+    <p>Professional Photographer</p>
+    <p class="hero-description">
+      I capture the moments that matter — turning memories into timeless photographs.
+      Whether it's portraits, nature, or events, my lens tells your story with emotion and light.
+    </p>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-effects">
+      <div class="circle circle1"></div>
+      <div class="circle circle2"></div>
+      <div class="circle circle3"></div>
+    </div>
+    <div class="profile-wrapper">
+      <img src="me.jpg" alt="My Photo" class="profile-pic" />
+    </div>
+  </div>
+</div>
+
+<!-- Gallery -->
+<section class="gallery popup-animate" id="portfolio">
+  <h2>My Work</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item" style="--delay: 0s;"><img src="pic1.jpg" alt="Photo 1"></div>
+    <div class="gallery-item" style="--delay: 0.1s;"><img src="pic2.jpg" alt="Photo 2"></div>
+    <div class="gallery-item" style="--delay: 0.2s;"><img src="pic3.jpg" alt="Photo 3"></div>
+    <div class="gallery-item" style="--delay: 0.3s;"><img src="pic4.jpg" alt="Photo 4"></div>
+    <div class="gallery-item" style="--delay: 0.4s;"><img src="pic5.jpg" alt="Photo 5"></div>
+    <div class="gallery-item" style="--delay: 0.5s;"><img src="pic6.jpg" alt="Photo 6"></div>
+    <div class="gallery-item" style="--delay: 0.6s;"><img src="pic7.jpg" alt="Photo 7"></div>
+    <div class="gallery-item" style="--delay: 0.7s;"><img src="pic8.jpg" alt="Photo 8"></div>
+    <div class="gallery-item" style="--delay: 0.8s;"><img src="pic9.jpg" alt="Photo 9"></div>
+    <div class="gallery-item" style="--delay: 0.9s;"><img src="pic10.jpg" alt="Photo 10"></div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section popup-animate" id="about">
+  <div class="about-content">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I'm Aravindh V, a passionate photographer who believes every moment tells a story. With years of experience capturing portraits, events, and nature, I focus on emotions, lighting, and mood to deliver photographs that speak.
+      </p>
+      <p>
+        I love working with clients to create memories that last a lifetime. Every photo session is a chance to create art and capture a unique perspective.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="about.jpg" alt="Photographer at work" />
+    </div>
+  </div>
+</section>
+
+<section class="contact fade-up popup-animate" id="contact">
+  <div class="contact-container">
+    <!-- Left Image -->
+    <div class="contact-left">
+      <img src="contact.jpeg" alt="Contact Image" />
+    </div>
+
+    <!-- Right Content -->
+    <div class="contact-right">
+      <h2>Contact Me</h2>
+      <p><strong>Phone:</strong> <a href="tel:+916385303741">+91 63853 03741</a></p>
+      <p><strong>Email:</strong> <a href="mailto:aravindhv1625@gmail.com">aravindhv1625@gmail.com</a></p>
+
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://www.instagram.com/a___r_a_v_i_n_d_h?igsh=MXV4bW96YmwxNGpkMg==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1DwmDS5rrw/?mibextid=qi2Omg" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/916385303741" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+      <!-- Contact Form -->
+      <form name="submit-to-google-sheet">
+        <input type="text" name="Name" placeholder="Your Name" required />
+        <input type="email" name="Email" placeholder="Your Email" required />
+        <textarea name="Message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+        <span id="msg"></span>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div id="form-popup" class="popup-message">✅ Your response has been submitted!</div>
+
+<div class="custom-cursor"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 70,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",  <!-- changed to only circles -->
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      }
+    },
+    "opacity": {
+      "value": 0.6,
+      "random": true
+    },
+    "size": {
+      "value": 4,
+      "random": true
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 130,
+      "color": "#ffffff",
+      "opacity": 0.2,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1.2,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out"
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      }
+    },
+    "modes": {
+      "repulse": {
+        "distance": 100,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
+<script>
+  // Scroll reveal for gallery
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.style.animationPlayState = 'paused';
+    observer.observe(item);
+  });
+
+  // Mobile nav toggle
+  document.getElementById("mobile-menu").addEventListener("click", () => {
+    document.querySelector(".nav-links").classList.toggle("active");
+  });
+</script>
+<!-- Nav Scroll + Re-Animation -->
+  <script>
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = this.getAttribute('href').substring(1);
+        const target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          target.classList.remove('show');
+          setTimeout(() => target.classList.add('show'), 300);
+        }
+      });
+    });
+
+    // Toggle mobile nav
+    document.getElementById("mobile-menu").addEventListener("click", () => {
+      document.querySelector(".nav-links").classList.toggle("active");
+    });
+  </script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzEL_00WFjFi_gYdd0Sr-qt1pBnt9aL7AYVE19oUZixviF-wZTm4Pd25eoTOxZnrW7u/exec';
+  const form = document.forms['submit-to-google-sheet'];
+  const popup = document.getElementById('form-popup');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        popup.classList.add('show');
+        form.reset();
+        setTimeout(() => popup.classList.remove('show'), 3000);
+      })
+      .catch(error => {
+        alert('Error sending message: ' + error.message);
+        console.error('Error!', error.message);
+      });
+  });
+</script>
+
+
+<!-- Intersection Observer for Fade Animations -->
+<script>
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.fade-up').forEach(el => {
+    fadeObserver.observe(el);
+  });
+</script>
+
+<script>
+    document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = this.getAttribute('href').substring(1);
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      target.classList.remove('show');
+      setTimeout(() => target.classList.add('show'), 300);
+    }
+  });
+});
+</script>
+
+<script>
+  // Scroll-triggered popup animation
+  const popupObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  // Observe all popup-animate elements
+  document.querySelectorAll('.popup-animate').forEach(el => {
+    popupObserver.observe(el);
+  });
+
+  // Nav click scroll + popup trigger
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const id = this.getAttribute('href').substring(1);
+      const target = document.getElementById(id);
+
+      if (target) {
+        // Scroll into view
+        target.scrollIntoView({ behavior: 'smooth' });
+
+        // Reset animation
+        target.classList.remove('show');
+        setTimeout(() => {
+          target.classList.add('show');
+        }, 100); // slight delay to retrigger transition
+      }
+    });
+  });
+</script>
+
+<script>
+  const cursor = document.querySelector(".custom-cursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.top = e.clientY + "px";
+  cursor.style.left = e.clientX + "px";
+});
+
+document.addEventListener("mousedown", () => {
+  cursor.style.transform = "translate(-50%, -50%) scale(1.8)";
+});
+document.addEventListener("mouseup", () => {
+  cursor.style.transform = "translate(-50%, -50%) scale(1)";
+});
+</script>
+
+</body>
+</html>
